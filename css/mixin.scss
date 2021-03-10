@@ -1,0 +1,379 @@
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@mixin container {
+    width: 90%;
+    margin: 0 auto;
+}
+//---color----//
+
+$red : #F73624;
+$hcolor:#2c3e50;
+$para:#787878;
+$border-width: 4px;
+// $border-color: #ffc107;
+$white:#fff;
+$cap:capitalize;
+$upper:uppercase;
+$none:none;
+$around:space-around;
+$between:space-between;
+$inherit:inherit;
+$end:flex-end;
+$bld:bold;
+$blder:bolder;
+$rel:relative;
+$abs:absolute;
+$hide:hidden;
+$mid:center;
+$cover:cover;
+$no-rpt:no-repeat;
+$full: 100%;
+//-----font----//
+
+$heading:'AlegreyaRegular';
+$p:'RalewayRegular';
+$transition: all .3s ease-in-out;
+$Arimo:'Arimo';
+
+@mixin heading { 
+        font-size: 1.5em;
+        line-height: 1.5;
+        letter-spacing: 1px;
+        word-spacing: 1px;
+        text-transform: $cap;
+        font-weight: $bld;
+        span{
+            color: $red;
+        } 
+}
+
+
+@mixin imgBefore {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(../image/hvr4.png)no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    z-index: -1;
+    animation: imghvr 3s linear infinite;
+}
+@mixin imgBefore5 {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(../image/hvr5.png)no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    z-index: -1;
+    animation: imghvr 3s linear infinite;
+}
+
+@mixin imgBefore6 {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(../image/hvr1.png)no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    z-index: -1;
+    animation: imghvr 3s linear infinite;
+}
+@mixin imgBefore7 {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(../image/hvr1.png)no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    z-index: -1;
+    animation: imghvr 3s linear infinite;
+}
+@mixin imgBefore8 {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(../image/hvr1.png)no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    z-index: -1;
+    animation: imghvr 3s linear infinite;
+}
+@mixin imgBefore9 {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(../image/hvr1.png)no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    z-index: -1;
+    animation: imghvr 3s linear infinite;
+}
+
+// ----second---page---gallryyy--//
+@mixin  grid-Hvr-Second {
+    &:hover{
+        .grid-hvr-content{
+            opacity: 1;
+            transition: $transition; 
+                &::before{
+                    width: 90px;
+                    height: 90px;
+                    transition: all .5s ease-in-out;
+                }
+                &::after{
+                    width: 90px;
+                    height: 90px;
+                    transition: all .5s ease-in-out;
+                } 
+        }
+        .bottom_Bar{
+           opacity: 0;
+            transition: $transition;
+        }
+     }
+     .grid-hvr-content{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        @include flex;
+        background: #f736249c;
+        z-index: 4;
+        opacity: 0;
+        transition: $transition;
+        position: relative;
+        &::before{
+            content: '';
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            left: 17px; 
+            top:  17px;
+            border-top: 2px solid #fff;
+            border-left: 2px solid #fff;
+            transition: all .5s ease-in-out;
+        }
+        &::after{
+           content: '';
+           width: 0px;
+           height: 0px;
+           position: absolute;
+           right: 17px;
+           bottom: 17px;//-156px;
+           border-bottom: 2px solid #fff;
+           border-right: 2px solid #fff;
+           transition: all .5s ease-in-out;
+       }
+        .Hvr_cnt{
+            text-align: center;  
+            h2{
+                font-size: 1.5em;
+                line-height: 1.5;
+                letter-spacing: 1px;
+                text-transform: $upper;
+                color: $white;
+            }
+            p{
+                font-size: 1em;
+               line-height: 1.5;
+               letter-spacing: 1px;
+               text-transform: $cap;
+               color: $white;
+               padding: 1rem 0;
+            }
+            a{
+                display: inline-block;
+                padding: .7rem 1.5rem;
+                border-radius: 5px;
+                background: #000000;
+                color: $white;
+                text-transform: $cap;
+                word-spacing: 1px;
+                letter-spacing: 1px;
+                z-index: 5;
+                &:hover{
+                    color: $red;
+                    transition: $transition;
+                    font-weight: bold;
+                }
+            }
+            .hvr-radial-out{
+               transition: $transition;
+               &::before{
+                   background: #fff;
+               }
+           }
+        }
+    }
+}
+// --end--here---//
+
+@mixin  grid-Hvr {
+    &:hover{
+        .grid-hvr-content{
+            opacity: 1;
+            transition: $transition; 
+                &::before{
+                    width: 245px;
+                    height: 245px;
+                    transition: all .5s ease-in-out;
+                }
+                &::after{
+                    width: 245px;
+                    height: 245px;
+                    transition: all .5s ease-in-out;
+                } 
+        }
+        .bottom_Bar{
+           opacity: 0;
+            transition: $transition;
+        }
+     }
+     .grid-hvr-content{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        @include flex;
+        background: #f736249c;
+        z-index: 1;
+        opacity: 0;
+        transition: $transition;
+        position: relative;
+        &::before{
+            content: '';
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            left: 23px;
+            top: 23px;
+            border-top: 2px solid #fff;
+            border-left: 2px solid #fff;
+            transition: all .5s ease-in-out;
+        }
+        &::after{
+           content: '';
+           width: 0px;
+           height: 0px;
+           position: absolute;
+           right: 23px;
+           bottom: 23px;//-156px;
+           border-bottom: 2px solid #fff;
+           border-right: 2px solid #fff;
+           transition: all .5s ease-in-out;
+       }
+        .Hvr_cnt{
+            text-align: center;  
+            h2{
+                font-size: 1.3em;
+                line-height: 1.5;
+                letter-spacing: 1px;
+                text-transform: $upper;
+                color: $white;
+            }
+            p{
+                font-size: 1em;
+               line-height: 1.5;
+               letter-spacing: 1px;
+               text-transform: $cap;
+               color: $white;
+               padding: 1rem 0;
+            }
+            a{
+                display: inline-block;
+                padding: .9rem 1.8rem;
+                border-radius: 5px;
+                background: #000000;
+                color: $white;
+                text-transform: $cap;
+                word-spacing: 1px;
+                letter-spacing: 1px;
+                z-index: 5;
+                &:hover{
+                    color: $red;
+                    transition: $transition;
+                    font-weight: bold;
+                }
+            }
+            .hvr-radial-out{
+               transition: $transition;
+               &::before{
+                   background: #fff;
+               }
+           }
+        }
+    }
+}
+@mixin grid-Hvr2 {
+    &:hover{
+        .grid-hvr-content{
+            &::before{
+                width: 131px!important;
+                height: 131px!important;
+                transition: all .5s ease-in-out;
+            }
+            &::after{
+                width: 131px!important;
+                height: 131px!important;
+                transition: all .5s ease-in-out;
+            }
+        }
+    }
+    .grid-hvr-content{ 
+            &::before{
+                left: 18px !important;
+                top: 15px!important;
+            }
+            &::after{
+               right: 18px !important;
+               bottom:  18px !important;//-213px;
+           }
+            h2{
+                font-size: 1.9em;
+                line-height: 1.5;
+                letter-spacing: 1px;
+                text-transform: $upper;
+                color: $white;
+            }
+            p{
+               font-size: 1em;
+               line-height: 1.5;
+               letter-spacing: 1px;
+               text-transform: $cap;
+               color: $white;
+               padding: 1rem 0;
+            }
+            a{
+                display: inline-block;
+                padding: .9rem 1.8rem;
+                border-radius: 5px;
+                background: #000000;
+                color: $white;
+                text-transform: $cap;
+                word-spacing: 1px;
+                letter-spacing: 1px;
+                z-index: 5;
+                &:hover{
+                    color: $red;
+                    transition: $transition;
+                    font-weight: bold;
+                }
+            }
+            .hvr-radial-out{
+               transition: $transition;
+               &::before{
+                   background: #fff;
+               }
+           } 
+    }
+}

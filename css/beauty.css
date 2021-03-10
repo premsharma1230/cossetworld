@@ -1,0 +1,304 @@
+// ----beauty----page-----//
+
+
+.Beauty-Wrapper{
+    header{
+        .Nav-wrp{
+            position: $rel!important;
+        }
+    }
+    .Beauty-banner{ 
+        height: 700px;
+        width: 100%;
+        overflow: $hide;
+        background: #f73624cf;
+        position: $rel;
+        &::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: url(../image/bnr_bg.png)repeat;
+            background-position: $mid;
+            position: $abs;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            animation: bganime 18s linear infinite;
+        }
+        .Banner_Content{
+            @include flex;
+            justify-content: $between!important;
+            .BL01{
+            }
+            .Banner_child{
+                width: 48%!important;
+                h1{
+                    font-size:4.5em;
+                    color: $white;
+                    line-height: 1.5;
+                    letter-spacing: 1px;
+                    word-spacing: 2px;
+                    font-family:$Arimo;
+                } 
+                p{
+                    padding: 1rem 4rem 1rem 0;
+                    color:$white;
+                    font-size: 1em;
+                    word-spacing: 1px;
+                    line-height: 1.8;
+                    letter-spacing: 1px;
+                }
+                .breadcrumb{
+                    padding: 1rem 0 0;
+                    li{
+                        display: inline-block;
+                        list-style-type: none; 
+                        a{
+                            font-family:$heading;
+                            font-size: 1.2em;
+                            color: $white;
+                            transition: $transition;
+                            text-transform: $upper;
+                            &:hover{
+                                opacity: .77;
+                                transition: $transition;
+                            }
+                        }
+                        &:last-child a{
+                            border-bottom: 1px solid $white;
+                            padding: 0 0 .1rem;
+                            font-weight: $bld;
+                        }
+                    }
+                    i.fas.fa-chevron-right{
+                        font-size: 13px;
+                        color: $white;
+                        padding: 0 .5rem;
+                    }
+                }
+                figure{
+                    img{
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+.BtService_Wrapper{
+    position: $rel;
+    overflow: $hide;
+    &::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: url(../image/our-bg.png) $no-rpt;
+        background-size: 100% 100%;
+        right: -55%;
+        top: -4px;
+        z-index: -1;
+        position: $abs;
+    }
+    .Grid_wrp{
+        // grid-template-columns:auto auto auto auto auto!important 
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))!important;
+
+        .Grid-item1{
+            height: 300px!important;
+            background: url(../image/grid01.png)$no-rpt!important;
+            background-size: $cover!important;
+        }
+        .Grid-item1.Grid-item_cmn01{
+            background-size: 100% 103%!important;
+        }
+        .Grid-item2{
+            background: url(../image/grid02.png)$no-rpt!important;
+            background-size: $cover!important;
+        }
+        .Grid-item5{
+            background: url(../image/grid05.png)$no-rpt!important;
+            background-size: $cover!important;
+        }
+        .Grid-item_cmn01{
+            &:hover{
+                .hvr_cnt2{
+                    &::before{
+                        width: 92px !important;
+                        height: 92px !important;
+                        transition: all .5s ease-in-out;
+                    }
+                    &::after{
+                        width: 92px !important;
+                        height: 92px !important;
+                        transition: all .5s ease-in-out;
+                    }
+                }
+            }
+            .Hvr_cnt {
+                h2 {
+                    font-size: 1.4em!important;
+                }
+                a {
+                    padding: .7rem 1rem!important;
+                    font-size: 15px;
+                }
+            }
+            .bottom_Bar {
+                h2{
+                    font-size: 1.1em!important;
+                }
+            }
+        }
+        .hvr_cnt2{
+            &::before{
+                 left: -6px !important;
+                 top: -67px !important;
+                 width: 0 ;
+                 height: 0 ;
+                 transition: all .5s ease-in-out;
+            }
+            &::after{
+                 right: -4px !important;
+                 bottom: -65px !important;
+                 width: 0 ;
+                 height: 0 ;
+                 transition: all .5s ease-in-out;
+            }
+        }
+    }
+}
+
+
+//----Hair--care---Section-----//
+
+    .Hair-care_Wrapper{
+        width: 100%;
+        padding: 2rem 0;
+        position: $rel;
+        &::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: url(../image/beauty-bg.png)$no-rpt;
+            background-size: $cover;
+            background-attachment: fixed;
+            position: $abs;
+            left:0;
+            top:0;
+            z-index: -1;
+        }
+        .HairCare-content{
+            width: 100%;
+            p{
+                font-size: 1em;
+                padding: 1rem 0 1.4rem;
+                line-height: 1.7;
+                letter-spacing: 1px;
+                word-spacing: 1px;
+            }
+            .hair-heading{
+                @include flex; 
+                padding: 0 0 2rem;
+                h2{
+                    font-size: 3.1em;
+                    line-height: 1.5;
+                    letter-spacing: 1px;
+                    word-spacing: 1px;
+                    text-transform: $cap;
+                    font-weight: $bld;
+                    text-align: $mid;
+                    display: inline-block;
+                    border-bottom: 1px solid $red;
+                    span{
+                        color: $red;
+                    }
+                }
+            }
+        }
+    }
+
+    // // ----Treatent--section--//
+    .Vitality_Wrapper{
+        width: 100%;
+        .Vitality-content{
+            .trt-cmn01{
+                @include flex;
+                justify-content: $between;  
+                figure{
+                    width: 60%;
+                    img{
+                        max-width: 90%;
+                    }
+                }
+                figcaption{
+                    width: 25%;
+                    h3{
+                        font-size: 2.5em;
+                        font-weight: $bld;
+                        text-transform: capitalize;
+                        letter-spacing: 1px;
+                        color: $red;
+                        position: $rel;
+                        animation: h3Anime 3s linear infinite;
+                        transition: $transition;
+                        animation-direction: alternate;
+                        border-bottom: 2px solid $red;
+                        display: inline-block;
+                    }
+                }
+            }
+            .trt_l01{
+                h3{
+                    &::before{
+                        content: '';
+                        width: 0px;
+                        /* height: 1px; */
+                        border: 1px dotted;
+                        position: $abs;
+                        left: -209px;
+                        top: 28px;
+                        animation: beforAnime 3s linear infinite;
+                        transition: $transition;
+                        animation-direction: alternate;
+                    }
+                }
+            }
+            .trt_l02{
+                flex-direction: row-reverse;
+                figcaption{
+                    h3{
+
+                        &::before{
+                            content: '';
+                            width: 0px;
+                            /* height: 1px; */
+                            border: 1px dotted;
+                            position: $abs;
+                            right: -224px;
+                            top: 33px;
+                            animation: beforAnime 3s linear infinite;
+                            transition: $transition;
+                            animation-direction: alternate;
+                        }
+                    }
+                }
+            } 
+            @keyframes beforAnime {
+                0%{
+                    width: 0px;
+                    transition: $transition;
+                    opacity: 0;
+                }
+                50%{
+                    width: 100px;
+                    transition: $transition;
+                }
+                100%{
+
+                    width: 200px;
+                    transition: $transition;
+                }
+            }
+        }
+    }
+}
